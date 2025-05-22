@@ -10,3 +10,20 @@
 # 5. Todas las notas deben estar entre 1.0 y 7.0.
 
 # 👇 Aquí comienza tu código
+
+cuantas_notas = int(input("Cuantas notas deseas ingresar?: "))
+notas = []
+for i in range(cuantas_notas):
+    while True:
+        nota = float(input(f"Ingresa la {i+1}° nota entre 1 y 7:"))
+        if nota >= 1.0 or nota <= 7.0:
+            notas.append(nota)
+            break
+        else:
+            print("Ingresa una nota valida entre 1 y 7")
+
+promedio = round(sum(notas)/cuantas_notas,2)
+if nota >= 4.0:
+    print("Aprobaste")
+else:
+    print("Hay tabla")
